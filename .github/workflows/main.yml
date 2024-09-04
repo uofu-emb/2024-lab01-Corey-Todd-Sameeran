@@ -11,6 +11,11 @@ jobs:
             rm -rf "${{ github.workspace }}"
             mkdir -p "${{ github.workspace }}"
 
+      - name: Checkout our repository
+        uses: actions/checkout@v3
+        with:
+            path: ${{github.workspace}}/source
+
       - name: Checkout pico-sdk/master
         uses: actions/checkout@v2
         with:
